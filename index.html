@@ -52,7 +52,17 @@
     </div>
     <div class="campo">
         <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" placeholder="Ingresar su correo" title="Ingresar Correo">
+        <input type="email" id="correo" name="correo" placeholder="Ingresar su correo" title="Ingresar Correo" onblur="validarCorreo()">
+    <script>
+        function validarCorreo() {
+            const correo = document.getElementById("correo");
+
+            if (correo.value !== "" && !correo.value.includes("@")) {
+            alert("Debes incluir el símbolo @ en el correo electrónico.");
+            correo.value = "";
+            }
+        }
+    </script>
     </div>
     <div class="campo">
         <label for="telefono">Teléfono:</label>
