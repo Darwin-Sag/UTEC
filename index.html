@@ -30,7 +30,7 @@
         <script>
             function Validar_edad() {
                 let Edad = document.getElementById("edad").value
-                if (Edad[2] < 16) {
+                if (Edad < 16) {
                     document.getElementById('edad').value="";
                     alert('La edad minima es de 16')
                 }
