@@ -28,15 +28,14 @@
         <label for="edad">Edad:</label>
         <input type="number" onblur="Validar_edad()" id="edad" name="edad" min="16" placeholder="Ingresar su edad" title="Ingresar Edad" required>
         <script>
-            function validarEdad() {
-                const edad = document.getElementById("edad");
-
-                if (edad.value !== "" && (edad.value < 18 || !Number.isInteger(Number(edad.value)))) {
-                alert("Debes ser mayor de edad (18 años o más).");
-                edad.value = "";
+            function Validar_edad() {
+                let Edad = document.getElementById("edad").value
+                if (Edad[2] < 16) {
+                    document.getElementById('edad').value="";
+                    alert('La edad minima es de 16')
+                }
             }
-        }
-    </script>
+        </script>
     </div>
     <div class="campo">
         <label for="dni">DNI:</label>
