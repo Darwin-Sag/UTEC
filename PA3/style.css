@@ -1,0 +1,122 @@
+:root {
+    --fondo: #eef2f6;
+    --papel: #ffffff;
+    --tinta: #1d2b3a;
+    --acento: #1f6f8b;
+    --borde: #b9c6d3;
+}
+  * { box-sizing: border-box; }
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;  /* uno a cada lado */
+    align-items: center;
+    max-width:150px;                /* limita la separación: esquina a esquina, pero no tanto */
+    margin: 0 auto 30px;             /* centrada, igual que los fieldset */
+}
+
+.cabecera img {
+    height: 80px;
+    width: auto;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--fondo);
+    color: var(--tinta);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centra todos los fieldset */
+    gap: 20px;
+}
+
+fieldset {
+    width: 100%;
+    max-width: 520px;      /* mismo ancho para todos */
+    margin: 0;
+    padding: 20px 24px 24px;
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--acento);
+}
+
+/* Cada par label + input en una cuadrícula de 2 columnas:
+     todos los labels tienen el mismo ancho y todos los inputs inician en la misma línea */
+.campo {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    column-gap: 16px;      /* separa el input del label */
+    margin-bottom: 14px;
+}
+
+.campo:last-child { margin-bottom: 0; }
+
+label { text-align: left; }
+
+.check {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 12px;
+}
+.check:last-child { margin-bottom: 0; }
+.check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    accent-color: var(--acento);
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    font: inherit;
+    background: #fff;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    font: inherit;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--acento);
+    outline-offset: 1px;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 10px 28px;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+    background: var(--acento);
+    color: #fff;
+}
+
+button[type="reset"] { background: #6b7a89; }
