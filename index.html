@@ -26,7 +26,7 @@
     </div>
     <div class="campo">
         <label for="edad">Edad:</label>
-        <input type="number" oninput="Validar_edad()" id="edad" name="edad" min="16" placeholder="Ingresar su edad" title="Ingresar Edad" required>
+        <input type="number" onchange="Validar_edad()" id="edad" name="edad" min="16" placeholder="Ingresar su edad" title="Ingresar Edad" required>
         <script>
             function Validar_edad() {
                 let Edad = document.getElementById("edad").value
