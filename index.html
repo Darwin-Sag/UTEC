@@ -39,7 +39,7 @@
     </div>
     <div class="campo">
         <label for="dni">DNI:</label>
-        <input type="tel" maxlength="8" oninput="Validar_dni()" pattern="0[0-9]{7}" id="dni" name="dni" placeholder="Ingresar su N° DNI" title="Ingresar DNI" required>
+        <input type="number" maxlength="8" oninput="Validar_dni()" pattern="0[0-9]{7}" id="dni" name="dni" placeholder="Ingresar su N° DNI" title="Ingresar DNI" required>
         <script>
             function Validar_dni(){
                 let Dni= document.getElementById('dni').value
