@@ -79,7 +79,7 @@
 
     <div class="campo">
         <label for="telefonop">Teléfono:</label>
-        <input type="tel" maxlength="9" oninput="Validar_celularp()" pattern="9[0-9]{8}" inputmode="numeric" id="telefonop" name="telefono" placeholder="Ingresar su numero de telefono" title="Ingresar telefono">
+        <input type="text" maxlength="9" oninput="Validar_celularp()" pattern="9[0-9]{8}" inputmode="numeric" id="telefonop" name="telefono" placeholder="Ingresar su numero de telefono" title="Ingresar telefono">
         <script>
             function Validar_celularp() {
                 let telefono_p=document.getElementById("telefonop").value;
