@@ -31,12 +31,12 @@
             function validarEdad() {
                 const edad = document.getElementById("edad");
 
-                if (edad.value !== "" && (edad.value < 1 || edad.value > 120)) {
-                    alert("Ingresa una edad válida entre 1 y 120 años.");
-                    edad.value = "";
-                }
+                if (edad.value !== "" && (edad.value < 18 || !Number.isInteger(Number(edad.value)))) {
+                alert("Debes ser mayor de edad (18 años o más).");
+                edad.value = "";
             }
-        </script>
+        }
+    </script>
     </div>
     <div class="campo">
         <label for="dni">DNI:</label>
