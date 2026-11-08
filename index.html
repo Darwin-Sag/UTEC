@@ -26,16 +26,13 @@
     </div>
     <div class="campo">
         <label for="edad">Edad:</label>
-        <input type="number" onblur="Validar_edad()" id="edad" name="edad" min="16" placeholder="Ingresar su edad" title="Ingresar Edad" required>
+        <input type="number" oninput="Validar_edad()" id="edad" name="edad" min="16" placeholder="Ingresar su edad" title="Ingresar Edad" required>
         <script>
             function Validar_edad() {
-                console.log("Validar_edad se ejecutó");
-                let campo = document.getElementById("edad");
-                let Edad = Number(campo.value);
-
-                if (campo.value !== "" && (Edad < 16 || !Number.isInteger(Edad))) {
-                    campo.value = "";
-                    alert("La edad mínima es de 16 años y debe ser un número entero.");
+                let Edad = document.getElementById("edad").value
+                if (Edad[2] < 16) {
+                    document.getElementById('edad').value="";
+                    alert('La edad minima es de 16')
                 }
             }
         </script>
